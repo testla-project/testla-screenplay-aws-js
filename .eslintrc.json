@@ -39,13 +39,6 @@
         "SwitchCase": 1
       }
     ],
-    "@typescript-eslint/indent": [
-      "error",
-      4,
-      {
-        "SwitchCase": 1
-      }
-    ],
     "linebreak-style": "off",
     "max-len": "off",
     "import/prefer-default-export": "off",

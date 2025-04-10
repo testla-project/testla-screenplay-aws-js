@@ -62,8 +62,7 @@ export class Get extends Action {
         const records = getRecordsOutput?.Records;
 
         if (records === undefined) {
-            console.error('No records received');
-            return undefined;
+            throw Error('No records received');
         }
 
         const textDecoder = new TextDecoder();
