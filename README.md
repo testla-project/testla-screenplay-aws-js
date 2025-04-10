@@ -1,4 +1,4 @@
-# Testla Screenplay-PlaywrAWSight
+# Testla Screenplay-AWS
 
 [![NPM Version](https://badge.fury.io/js/@testla%2Fscreenplay-aws.svg)](https://badge.fury.io/js/@testla%2Fscreenplay-aws)
 [![Downloads](https://img.shields.io/npm/dm/@testla/screenplay-aws.svg)](https://npm-stat.com/charts.html?package=@testla/screenplay-aws)

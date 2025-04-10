@@ -10,7 +10,6 @@ There is no need to wait for anything prior to performing a task.
 
 You will learn:
 - How to write the first test
-- How to write the first test
 - How to perform tasks and actions
 - How to use questions
 
@@ -18,13 +17,13 @@ You will learn:
 Take a look at the following example to see how to write a test. 
 
 ```typescript
-test.describe('Check title', () => {
+test.describe('Check message on kinesis stream', () => {
     // The test uses the defined Actor Andy from the fixture
-    test('has title', async ({ Andy }) => {
-        // Execute the action Navigate.to()
-        await Andy.attemptsTo(Navigate.to('https://playwright.dev/'));
-        // Ask for a specific element - validate title equals expected
-        await Andy.asks(Element.toHave.text('h1', 'Playwright enables reliable end-to-end testing for modern web apps.'));
+    test('is on stream', async ({ Andy }) => {
+        // Reads messages from stream
+        const records = await Andy.attemptsTo(Get.recordsFrom('my-stream'));
+        // Asks if a given message is on the stream
+        await Andy.asks(Collection.includes.entry(records, recordToFind));
     });
 });
 ```
