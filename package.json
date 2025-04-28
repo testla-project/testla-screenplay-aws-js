@@ -7,7 +7,7 @@
   "commitHooks": false,
   "scripts": {
     "build": "rm -r lib || true && tsc --project ./tsconfig-build.json",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No test specified\"",
     "lint:ts": "tsc --noEmit",
     "lint:js": "eslint . --cache",
     "lint": "npm run lint:js && npm run lint:ts",
