@@ -1,0 +1,64 @@
+{
+  "name": "@testla/screenplay-aws",
+  "version": "1.0.0-alpha.1",
+  "description": "Implementation of the AWS abilities, actions and questions.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "commitHooks": false,
+  "scripts": {
+    "build": "rm -r lib || true && tsc --project ./tsconfig-build.json",
+    "test": "echo \"No test specified\"",
+    "lint:ts": "tsc --noEmit",
+    "lint:js": "eslint . --cache",
+    "lint": "npm run lint:js && npm run lint:ts",
+    "prerelease": "npm run lint && npm run build && npm run test",
+    "release": "node scripts/release.js",
+    "preversion": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/testla-project/testla-screenplay-aws-js.git"
+  },
+  "keywords": [
+    "aws",
+    "screenplay",
+    "testla",
+    "testing",
+    "test",
+    "tdd",
+    "bdd",
+    "e2e"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/testla-project/testla-screenplay-aws-js/issues"
+  },
+  "homepage": "https://github.com/testla-project/testla-screenplay-aws-js#readme",
+  "engines": {
+    "node": ">=18.x.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.1",
+    "@typescript-eslint/eslint-plugin": "^8.15.0",
+    "@typescript-eslint/parser": "^8.15.0",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.2",
+    "typescript": "^5.6.3",
+    "v8-to-istanbul": "^9.3.0"
+  },
+  "dependencies": {
+    "@testla/screenplay": "^1.1.0"
+  },
+  "peerDependencies": {
+    "@aws-sdk/client-kinesis": "3.696.0",
+    "@aws-sdk/credential-providers": "3.696.0",
+    "@aws-sdk/types": "3.775.0"
+  }
+}
