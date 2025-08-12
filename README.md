@@ -1,4 +1,7 @@
-# Testla Screenplay-AWS
+<h1 style="display: flex; align-items: center;">
+  <img src="./docs/testla-logo.png" alt="Testla Logo" style="height: 32px; margin-right: 10px;">
+  Testla Screenplay-AWS
+</h1>
 
 [![NPM Version](https://badge.fury.io/js/@testla%2Fscreenplay-aws.svg)](https://badge.fury.io/js/@testla%2Fscreenplay-aws)
 [![Downloads](https://img.shields.io/npm/dm/@testla/screenplay-aws.svg)](https://npm-stat.com/charts.html?package=@testla/screenplay-aws)
@@ -31,6 +34,7 @@ Testla offers plenty of resources to help you get started with the solution:
 
 ## 📣 Your feedback matters!
 
-Do you find Testla useful? Give it a ⭐ star on GitHub!
+Do you find Testla useful? Give it a ⭐ star on GitHub!<br>
 Found a bug? Need a feature? Raise [an issue](https://github.com/testla-project/testla-screenplay-aws-js/issues?state=open)
-or submit a pull request.
+or submit a pull request.<br>
+Want to get in direct contact with us? Use our [Discord Community](https://discord.gg/MDRjCH3v).
