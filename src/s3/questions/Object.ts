@@ -1,6 +1,6 @@
 import { Actor, Question } from '@testla/screenplay';
-import { expect } from '@playwright/test';
 import { HeadObjectCommand, HeadObjectCommandInput } from '@aws-sdk/client-s3';
+import assert from 'assert';
 import { UseS3 } from '../abilities/UseS3';
 import { CheckMode } from '../../types';
 
@@ -45,7 +45,7 @@ export class S3Object extends Question<boolean> {
                 throw err;
             });
 
-        expect(isExisting).toBe(checkMode === 'positive');
+        assert.equal(isExisting, checkMode === 'positive');
         return Promise.resolve(true); // if is not the expected result there will be an exception
     }
 
