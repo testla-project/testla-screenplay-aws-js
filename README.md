@@ -15,7 +15,7 @@ It enables you to create multi-actor acceptance and regression tests that captur
 
 Screenplay AWS comes with Abilities, Actions and Questions to interact with AWS resources.
 
-The package currentl supports the following resources:
+The package currently supports the following resources:
 
 ☑ Kinesis<br>
 ☑ S3
