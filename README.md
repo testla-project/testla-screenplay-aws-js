@@ -1,7 +1,4 @@
-<h1 style="display: flex; align-items: center;">
-  <img src="./docs/testla-logo.png" alt="Testla Logo" style="height: 32px; margin-right: 10px;">
-  Testla Screenplay-AWS
-</h1>
+# ![Testla Logo](./docs/testla-logo-32.png) Testla Screenplay-AWS
 
 [![NPM Version](https://badge.fury.io/js/@testla%2Fscreenplay-aws.svg)](https://badge.fury.io/js/@testla%2Fscreenplay-aws)
 [![Downloads](https://img.shields.io/npm/dm/@testla/screenplay-aws.svg)](https://npm-stat.com/charts.html?package=@testla/screenplay-aws)
@@ -13,6 +10,15 @@
 We've designed Testla to make it easier for you to create test scenarios that build a shared understanding and trust between your business sponsors and delivery teams and to help you prove that your system meets and continues to meet its requirements.
 
 It enables you to create multi-actor acceptance and regression tests that captures your **domain vocabulary**, model your **business workflows**, and help you write **high-quality test automation code** you can reuse across projects and teams. 
+
+## Whats in Testla Screenplay AWS?
+
+Screenplay AWS comes with Abilities, Actions and Questions to interact with AWS resources.
+
+The package currentl supports the following resources:
+
+☑ Kinesis<br>
+☑ S3
 
 ## Installation
 

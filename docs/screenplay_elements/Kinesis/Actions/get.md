@@ -50,6 +50,14 @@ public static recordsFrom(stream: string, options?: StreamOptions): Get;
   - `options` (optional) - The options object to provide streamIdentifier or partitionKey
 - **Returns:** `Get` - A new instance of the `Get` class.
 
+Usage:
+
+```typescript
+await actor.attemptsTo(
+    Get.recordsFrom(stream, options),
+);
+```
+
 #### startingAt
 
 *Introduced in: 1.0.0*
@@ -62,6 +70,14 @@ public startingAt(startTime: Date): Get;
 - **Parameters:**
   - `startTime` - Date object
 - **Returns:** `Get` - The updated instance of the `Get` class.
+
+Usage:
+
+```typescript
+await actor.attemptsTo(
+    Get.recordsFrom(stream, options).startingAt(startTime),
+);
+```
 
 #### withAbilityAlias
 
@@ -76,6 +92,14 @@ public withAbilityAlias(alias: string): Get;
   - `alias` - The alias.
 - **Returns:** `Get` - Returns the current action.
 
+Usage:
+
+```typescript
+await actor.attemptsTo(
+    Get.recordsFrom(stream, options).withAbilityAlias('myAlias'),
+);
+```
+
 #### orSkipOnFail
 
 *Introduced in: 1.0.0*
@@ -86,5 +110,13 @@ public get orSkipOnFail(): Get;
 
 - **Description:** Allows to skip an action on fail.
 - **Returns:** `Get` - Returns the current action.
+
+Usage:
+
+```typescript
+await actor.attemptsTo(
+    Get.recordsFrom(stream, options).orSkipOnFail,
+);
+```
 
 [Back to overview](../../screenplay_elements.md)

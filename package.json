@@ -58,6 +58,7 @@
   },
   "peerDependencies": {
     "@aws-sdk/client-kinesis": "3.696.0",
+    "@aws-sdk/client-s3": "^3.696.0",
     "@aws-sdk/credential-providers": "3.696.0",
     "@aws-sdk/types": "3.775.0"
   }
