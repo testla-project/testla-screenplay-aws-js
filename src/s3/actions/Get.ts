@@ -22,7 +22,7 @@ export class Get extends Action {
      * @param getObjectCommandInput get object command input
      * @returns an instance of Get
      */
-    public static with(getObjectCommandInput: GetObjectCommandInput): Get {
+    public static object(getObjectCommandInput: GetObjectCommandInput): Get {
         const instance = new Get(getObjectCommandInput);
         instance.setCallStackInitializeCalledWith({ getObjectCommandInput });
         return instance;

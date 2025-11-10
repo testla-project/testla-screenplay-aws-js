@@ -23,7 +23,7 @@ export class Put extends Action {
      * @param putObjectCommandInput put object command input
      * @returns an instance of Put
      */
-    public static with(putObjectCommandInput: PutObjectCommandInput): Put {
+    public static object(putObjectCommandInput: PutObjectCommandInput): Put {
         const instance = new Put(putObjectCommandInput);
         instance.setCallStackInitializeCalledWith({ putObjectCommandInput });
         return instance;

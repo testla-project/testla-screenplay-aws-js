@@ -22,7 +22,7 @@ export class Delete extends Action {
      * @param deleteObjectCommandInput delete object command input
      * @returns an instance of Delete
      */
-    public static with(deleteObjectCommandInput: DeleteObjectCommandInput): Delete {
+    public static object(deleteObjectCommandInput: DeleteObjectCommandInput): Delete {
         const instance = new Delete(deleteObjectCommandInput);
         instance.setCallStackInitializeCalledWith({ deleteObjectCommandInput });
         return instance;
