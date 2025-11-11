@@ -1,6 +1,6 @@
 {
   "name": "@testla/screenplay-aws",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Implementation of the AWS abilities, actions and questions.",
   "main": "index.js",
   "types": "index.d.ts",
@@ -58,6 +58,7 @@
   },
   "peerDependencies": {
     "@aws-sdk/client-kinesis": "3.696.0",
+    "@aws-sdk/client-s3": "^3.696.0",
     "@aws-sdk/credential-providers": "3.696.0",
     "@aws-sdk/types": "3.775.0"
   }

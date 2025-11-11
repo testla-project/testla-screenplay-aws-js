@@ -29,6 +29,14 @@ public getClient(): KinesisClient
 - **Description:** Get the kinesis client associated with this instance.
 - **Returns:** `KinesisClient` - The AWS kinesis client.
 
+Usage:
+
+```typescript
+// inside an actions performAs method
+const kinesisClient = UseKinesis.as(actor, this.abilityAlias).getClient();
+// now you can use the client
+```
+
 #### using
 
 ```typescript
@@ -39,6 +47,12 @@ public static using(settings: AwsSettings): UseKinesis
 - **Parameters:**
   - `settings` - The AWS Settings.
 - **Returns:** `UseKinesis` - The initialized `UseKinesis` object.
+
+Usage:
+
+```typescript
+actor.can(UseKinesis.using(settings))
+```
 
 #### as
 

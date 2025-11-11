@@ -4,3 +4,5 @@ export type AwsSettings = {
     region: string;
     credentials?: AwsCredentialIdentity;
 }
+
+export type CheckMode = 'positive' | 'negative';

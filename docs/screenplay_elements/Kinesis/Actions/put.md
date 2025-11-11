@@ -51,6 +51,14 @@ public static recordTo(data: any, stream: string, options?: StreamOptions): Put;
   - `options` (optional) - The options object to provide streamIdentifier or partitionKey
 - **Returns:** `Put` - A new instance of the `Put` class.
 
+Usage:
+
+```typescript
+await actor.attemptsTo(
+    Put.recordTo(data, stream, options),
+);
+```
+
 #### recordsTo
 
 *Introduced in: 1.0.0*
@@ -66,6 +74,14 @@ public static recordsTo(data: any[], stream: string, options?: StreamOptions): P
   - `options` (optional) - The options object to provide streamIdentifier or partitionKey
 - **Returns:** `Put` - A new instance of the `Put` class.
 
+Usage:
+
+```typescript
+await actor.attemptsTo(
+    Put.recordsTo(data, stream, options),
+);
+```
+
 #### withAbilityAlias
 
 *Introduced in: 1.0.0*
@@ -79,6 +95,14 @@ public withAbilityAlias(alias: string): Put;
   - `alias` - The alias.
 - **Returns:** `Put` - Returns the current action.
 
+Usage:
+
+```typescript
+await actor.attemptsTo(
+    Put.recordsTo(data, stream, options).withAbilityAlias('myAlias'),
+);
+```
+
 #### orSkipOnFail
 
 *Introduced in: 1.0.0*
@@ -89,5 +113,12 @@ public get orSkipOnFail(): Put;
 
 - **Description:** Allows to skip an action on fail.
 - **Returns:** `Put` - Returns the current action.
+
+Usage:
+
+```typescript
+await actor.attemptsTo(
+    Put.recordsTo(data, stream, options).orSkipOnFail,
+);
 
 [Back to overview](../../screenplay_elements.md)

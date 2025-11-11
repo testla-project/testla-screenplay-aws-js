@@ -2,7 +2,7 @@
 
 # Get
 
-The `Get` class provides a convenient way to read messages from a kinesis stream. This class extends the `Action` class. 
+The `Get` class provides a convenient way to get objects from S3. This class extends the `Action` class. 
 
 ## Table of Contents
 
@@ -12,8 +12,7 @@ The `Get` class provides a convenient way to read messages from a kinesis stream
     - [Extends](#extends)
     - [Methods](#methods)
       - [performAs](#performas)
-      - [recordsFrom](#recordsfrom)
-      - [startingAt](#startingat)
+      - [object](#object)
       - [withAbilityAlias](#withabilityalias)
       - [orSkipOnFail](#orskiponfail)
 
@@ -21,7 +20,7 @@ The `Get` class provides a convenient way to read messages from a kinesis stream
 
 ### Extends
 
-This class extends the `Action` class, providing a specific implementation for getting messages from a kinesis stream.
+This class extends the `Action` class, providing a specific implementation for getting objects from S3.
 
 ### Methods
 
@@ -31,51 +30,29 @@ This class extends the `Action` class, providing a specific implementation for g
 public async performAs(actor: Actor): Promise<any>;
 ```
 
-- **Description:** Gets messages from a kinesis stream.
+- **Description:** Get an object from S3.
 - **Parameters:**
   - `actor` - The actor performing the action.
 - **Returns:** `Promise<any>` - The response object.
 
-#### recordsFrom
+#### object
 
 *Introduced in: 1.0.0*
 
 ```typescript
-public static recordsFrom(stream: string, options?: StreamOptions): Get;
+public static object(getObjectCommandInput): Get;
 ```
 
 - **Description:** Create a new instance of the `Get` class with the specified stream and options.
 - **Parameters:**
-  - `stream` - stream name or arn (can be controlled via options streamIdentifier).
-  - `options` (optional) - The options object to provide streamIdentifier or partitionKey
+  - `getObjectCommandInput` - The GetObjectCommandInput object.
 - **Returns:** `Get` - A new instance of the `Get` class.
 
 Usage:
 
 ```typescript
 await actor.attemptsTo(
-    Get.recordsFrom(stream, options),
-);
-```
-
-#### startingAt
-
-*Introduced in: 1.0.0*
-
-```typescript
-public startingAt(startTime: Date): Get;
-```
-
-- **Description:** Sets the start from which the records are read.
-- **Parameters:**
-  - `startTime` - Date object
-- **Returns:** `Get` - The updated instance of the `Get` class.
-
-Usage:
-
-```typescript
-await actor.attemptsTo(
-    Get.recordsFrom(stream, options).startingAt(startTime),
+    Get.object(getObjectCommandInput),
 );
 ```
 
@@ -96,7 +73,7 @@ Usage:
 
 ```typescript
 await actor.attemptsTo(
-    Get.recordsFrom(stream, options).withAbilityAlias('myAlias'),
+    Get.object(getObjectCommandInput).withAbilityAlias('myAlias'),
 );
 ```
 
@@ -115,7 +92,7 @@ Usage:
 
 ```typescript
 await actor.attemptsTo(
-    Get.recordsFrom(stream, options).orSkipOnFail,
+    Get.object(getObjectCommandInput).orSkipOnFail,
 );
 ```
 
