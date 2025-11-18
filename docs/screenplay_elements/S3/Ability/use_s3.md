@@ -10,7 +10,7 @@ The `UseS3` class is part of a testing library built on top of AWS S3, implement
   - [Table of Contents](#table-of-contents)
   - [Class Overview](#class-overview)
     - [Methods](#methods)
-      - [getRequestContext](#getrequestcontext)
+      - [getClient](#getclient)
       - [using](#using)
       - [as](#as)
 

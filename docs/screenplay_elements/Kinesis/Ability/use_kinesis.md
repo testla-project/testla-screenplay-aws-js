@@ -10,7 +10,7 @@ The `UseKinesis` class is part of a testing library built on top of AWS Kinesis,
   - [Table of Contents](#table-of-contents)
   - [Class Overview](#class-overview)
     - [Methods](#methods)
-      - [getRequestContext](#getrequestcontext)
+      - [getClient](#getClient)
       - [using](#using)
       - [as](#as)
 

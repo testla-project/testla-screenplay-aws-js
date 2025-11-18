@@ -17,6 +17,7 @@ Screenplay AWS comes with Abilities, Actions and Questions to interact with AWS 
 
 The package currently supports the following resources:
 
+☑ Batch<br>
 ☑ Kinesis<br>
 ☑ S3
 

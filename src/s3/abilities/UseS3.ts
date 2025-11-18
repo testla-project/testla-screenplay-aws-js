@@ -13,7 +13,7 @@ export class UseS3 extends Ability {
     /**
      * Instanciates a new S3 client
      *
-     * @param {AwsSettings} settings like region and credetials
+     * @param {AwsSettings} settings like region and credentials
      * @returns {UseS3} s3 ability
      */
     public static using(settings: AwsSettings) {

@@ -67,7 +67,7 @@ static get notTo(): S3Object;
 public exist(headObjectCommandInput: HeadObjectCommandInput): S3Object;
 ```
 
-- **Description:** Set up the verification for the response status code.
+- **Description:** Set up the verification for the object to exist.
 - **Parameters:**
   - `headObjectCommandInput` - The HeadObjectCommandInput definition.
 - **Returns:** `S3Object` - The updated instance of the `S3Object` class.

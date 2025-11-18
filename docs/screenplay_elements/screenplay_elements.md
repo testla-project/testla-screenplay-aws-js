@@ -2,6 +2,21 @@
 
 # Screenplay elements
 
+## Batch
+
+### Ability
+
+- [UseBatch](./Batch/Ability/use_batch.md)
+
+### Actions
+
+- [Submit](./Batch/Actions/submit.md)
+- [Wait](./Batch/Actions/wait.md)
+
+### Questions
+
+- [Job](./Batch/Questions/job.md)
+
 ## Kinesis
 
 ### Ability
@@ -26,6 +41,7 @@ No specific questions available
 ### Actions
 
 - [Get](./S3/Actions/get.md)
+- [List](./S3/Actions/list.md)
 - [Put](./S3/Actions/put.md)
 - [Delete](./S3/Actions/delete.md)
 

@@ -15,7 +15,7 @@ export class UseKinesis extends Ability {
     /**
      * Instanciates a new Kinesis client
      *
-     * @param {AwsSettings} settings like region and credetials
+     * @param {AwsSettings} settings like region and credentials
      * @returns {UseKinesis} kinesis ability
      */
     public static using(settings: AwsSettings) {
