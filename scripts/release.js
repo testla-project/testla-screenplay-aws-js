@@ -33,7 +33,7 @@ confirmToProceed('Is the set version correct for this release?', () => {
                 fs.writeFileSync('lib/package.json', JSON.stringify(releasePackage));
                 fs.copyFileSync('README.md', 'lib/README.md');
 
-                execSync(`npm publish ./lib${isBeta ? ' --tag beta' : ''}`);
+                execSync(`npm publish ./lib${isBeta ? ' --tag beta --tag latest' : ''}`);
             } catch (err) {
                 console.error(err);
                 throw new Error('Failed to publish package');
