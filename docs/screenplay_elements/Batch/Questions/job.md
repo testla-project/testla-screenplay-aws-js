@@ -96,6 +96,7 @@ public status(jobId: string, statusToLookup: JobStatus): Job;
 - **Parameters:**
   - `jobId` - The job id
   - `statusToLookup` - The status to be checked against
+  - `options` - The job status check options (optional)
 - **Returns:** `Job` - The updated instance of the `Job` class.
 
 Usage:
@@ -103,11 +104,11 @@ Usage:
 ```typescript
 // To verify that the job has a given status
 await actor.asks(
-    Job.toHave.status('myJobId', 'SUCCEEDED'),
+    Job.toHave.status('myJobId', 'SUCCEEDED', { timeout: 30000, delayBetweenRetries: 500 }),
 );
 // To verify that the job does not have a given status
 await actor.asks(
-    Job.toNotHave.status('myJobId', 'SUCCEEDED'),
+    Job.toNotHave.status('myJobId', 'SUCCEEDED', { timeout: 30000, delayBetweenRetries: 500 }),
 );
 ```
 
@@ -116,12 +117,13 @@ await actor.asks(
 *Introduced in: 1.0.0*
 
 ```typescript
-public finished(jobId: string): Job;
+public finished(jobId: string, options): Job;
 ```
 
 - **Description:** Set up the verification for the job to be finished.
 - **Parameters:**
   - `jobId` - The job id
+  - `options` - The job status check options (optional)
 - **Returns:** `Job` - The updated instance of the `Job` class.
 
 Usage:
@@ -129,11 +131,11 @@ Usage:
 ```typescript
 // To verify that the job is finished
 await actor.asks(
-    Job.toBe.finished('myJobId'),
+    Job.toBe.finished('myJobId', { timeout: 30000, delayBetweenRetries: 500 }),
 );
 // To verify that the job is not fnished
 await actor.asks(
-    Job.toNotBe.finished('myJobId'),
+    Job.toNotBe.finished('myJobId', { timeout: 30000, delayBetweenRetries: 500 }),
 );
 ```
 

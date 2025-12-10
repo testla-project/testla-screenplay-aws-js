@@ -46,14 +46,14 @@ public static forJobFinished(jobId, options): Wait;
 - **Description:** Create a new instance of the `Wait` class with the specified job id and optional options. The default timeout is 30000 (30sec).
 - **Parameters:**
   - `jobId` - The job id.
-  - `options` - The wait options (optional)
+  - `options` - The job status check options (optional)
 - **Returns:** `Wait` - A new instance of the `Wait` class.
 
 Usage:
 
 ```typescript
 await actor.attemptsTo(
-    Wait.forJobFinished('myJobId', { timeout: 30000 }),
+    Wait.forJobFinished('myJobId', { timeout: 30000, delayBetweenRetries: 500 }),
 );
 ```
 

@@ -6,3 +6,8 @@ export type JobStatus =
     | 'RUNNING'
     | 'SUCCEEDED'
     | 'FAILED';
+
+export type JobStatusCheckOptions = {
+    timeout?: number;
+    delayBetweenRetries?: number;
+};
