@@ -30,7 +30,7 @@ This class extends the `Action` class, providing a specific implementation for g
 public async performAs(actor: Actor): Promise<any>;
 ```
 
-- **Description:** Get an object from S3.
+- **Description:** Get an object from S3. If not specified otherwise returns the raw GetObjectCommandOutput.
 - **Parameters:**
   - `actor` - The actor performing the action.
 - **Returns:** `Promise<any>` - The response object.
@@ -53,6 +53,44 @@ Usage:
 ```typescript
 await actor.attemptsTo(
     Get.object(getObjectCommandInput),
+);
+```
+
+#### asText
+
+*Introduced in: 1.0.0*
+
+```typescript
+public get asText(): Get;
+```
+
+- **Description:** Turn the result into plain text.
+- **Returns:** `Get` - Returns the current action.
+
+Usage:
+
+```typescript
+await actor.attemptsTo(
+    Get.object(getObjectCommandInput).asText,
+);
+```
+
+#### asJson
+
+*Introduced in: 1.0.0*
+
+```typescript
+public get asJson(): Get;
+```
+
+- **Description:** Turn the result into a JSON object (by trying to parse the content).
+- **Returns:** `Get` - Returns the current action.
+
+Usage:
+
+```typescript
+await actor.attemptsTo(
+    Get.object(getObjectCommandInput).asJson,
 );
 ```
 
