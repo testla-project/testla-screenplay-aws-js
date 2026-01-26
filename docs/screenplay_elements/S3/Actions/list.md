@@ -13,6 +13,9 @@ The `List` class provides a convenient way to list objects from S3. This class e
     - [Methods](#methods)
       - [performAs](#performas)
       - [objects](#object)
+      - [asText](#astext)
+      - [asJson](#asjson)
+      - [withTags](#withtags)
       - [withAbilityAlias](#withabilityalias)
       - [orSkipOnFail](#orskiponfail)
 
@@ -43,7 +46,7 @@ public async performAs(actor: Actor): Promise<ListObjectsV2CommandOutput>;
 public static objects(listObjectsCommandInput): List;
 ```
 
-- **Description:** Create a new instance of the `List` class with the specified stream and options.
+- **Description:** Create a new instance of the `List` class with the specified listObjectsCommandInput.
 - **Parameters:**
   - `listObjectsCommandInput` - The ListObjectsV2CommandInput object.
 - **Returns:** `List` - A new instance of the `List` class.
@@ -91,6 +94,25 @@ Usage:
 ```typescript
 await actor.attemptsTo(
     List.objects(listObjectsCommandInput).asJson,
+);
+```
+
+#### withTags
+
+*Introduced in: 1.0.0*
+
+```typescript
+public get withTags(): List;
+```
+
+- **Description:** Includes object tags in the list. (This wont have an impact on the result if asText is applied)
+- **Returns:** `List` - Returns the current action.
+
+Usage:
+
+```typescript
+await actor.attemptsTo(
+    List.objects(listObjectsCommandInput).withTags,
 );
 ```
 
