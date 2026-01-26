@@ -13,6 +13,9 @@ The `Get` class provides a convenient way to get objects from S3. This class ext
     - [Methods](#methods)
       - [performAs](#performas)
       - [object](#object)
+      - [objectTags](#objecttags)
+      - [asText](#astext)
+      - [asJson](#asjson)
       - [withAbilityAlias](#withabilityalias)
       - [orSkipOnFail](#orskiponfail)
 
@@ -43,7 +46,7 @@ public async performAs(actor: Actor): Promise<any>;
 public static object(getObjectCommandInput): Get;
 ```
 
-- **Description:** Create a new instance of the `Get` class with the specified stream and options.
+- **Description:** Create a new instance of the `Get` class with the specified getObjectCommandInput.
 - **Parameters:**
   - `getObjectCommandInput` - The GetObjectCommandInput object.
 - **Returns:** `Get` - A new instance of the `Get` class.
@@ -53,6 +56,27 @@ Usage:
 ```typescript
 await actor.attemptsTo(
     Get.object(getObjectCommandInput),
+);
+```
+
+#### objectTags
+
+*Introduced in: 1.0.0*
+
+```typescript
+public static objectTags(getObjectTaggingCommandInput): Get;
+```
+
+- **Description:** Create a new instance of the `Get` class with the specified getObjectTaggingCommandInput.
+- **Parameters:**
+  - `getObjectTaggingCommandInput` - The GetObjectTaggingCommandInput object.
+- **Returns:** `Get` - A new instance of the `Get` class.
+
+Usage:
+
+```typescript
+await actor.attemptsTo(
+    Get.objectTags(getObjectTaggingCommandInput),
 );
 ```
 
